@@ -265,12 +265,12 @@ contract MineableToken is IERC20 {
 			_reAdjustDifficulty();
 		}
 		
-		bytes32 challengeNumber2 = ArbSys(0x0000000000000000000000000000000000000064).arbBlockHash( ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber() - 1);
+		bytes32 challengeNumber2 = block.blockhash(block.number - 1);
 		require(challengeNumber2 != challengeNumber, "No same challenge Solves");
 		challengeNumber = challengeNumber2;
-
-     bytes32 solution = solutionForChallenge[challengeNumber];
-     if(solution != 0x0) revert();  //prevent the same answer from awarding twice
+		
+		bytes32 solution = solutionForChallenge[challengeNumber];
+		if(solution != 0x0) revert();  //prevent the same answer from awarding twice
 	}
 
 
@@ -297,7 +297,7 @@ contract MineableToken is IERC20 {
 		}
 
 		latestDifficultyPeriodStarted2 = blktimestamp;
-		latestDifficultyPeriodStarted = ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber();
+		latestDifficultyPeriodStarted = block.number;
 		if(miningTarget < _MINIMUM_TARGET) //very difficult
 		{
 			miningTarget = _MINIMUM_TARGET;
