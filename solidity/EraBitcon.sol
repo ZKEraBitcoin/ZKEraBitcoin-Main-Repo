@@ -166,13 +166,13 @@ contract MineableToken is IERC20 {
     bool locked = false;
 	
 // metadata
-    string public name = "Mineable Token";
-    string public constant symbol = "0xMT";
+    string public name = "EraBitcoin";
+    string public constant symbol = "eraBTC";
     uint8 public constant decimals = 18;
 	
     
 	constructor() {
-	    startTime = 1684790977; // On GMT: Monday, May 22, 2023 9:29:37 PM
+	    startTime = block.timestamp; 
 	    reward_amount = 0;  //Zero reward for first days to setup miners
 	    rewardEra = 0;
 	    tokensMinted = 0;
