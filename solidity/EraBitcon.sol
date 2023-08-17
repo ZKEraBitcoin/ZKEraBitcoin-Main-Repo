@@ -202,7 +202,6 @@ contract eraBitcoin is IERC20 {
 		_startNewMiningEpoch();
 
 		balances[msg.sender] = balances[msg.sender].add(reward_amount);
-		emit Transfer(msg.sender, reward_amount);
 		tokensMinted = tokensMinted.add(reward_amount);
 
 		emit Mint(msg.sender, reward_amount, epochCount, challengeNumber );
