@@ -196,6 +196,9 @@ contract eraBitcoin is IERC20 {
 		//the digest must be smaller than the target
 		require(uint256(digest) < miningTarget, "Digest must be smaller than miningTarget");
 
+		//save digest
+             	solutionForChallenge[challengeNumber] = digest;
+
 		_startNewMiningEpoch();
 
 		balances[msg.sender] = balances[msg.sender].add(reward_amount);
@@ -230,11 +233,8 @@ contract eraBitcoin is IERC20 {
 		{
 			_reAdjustDifficulty();
 		}
-		
-		bytes32 challengeNumber2 = block.blockhash(block.number - 1);
-		require(challengeNumber2 != challengeNumber, "No same challenge Solves");
-		challengeNumber = challengeNumber2;
-		
+
+		challengeNumber = block.blockhash(block.number - 1);
 		bytes32 solution = solutionForChallenge[challengeNumber];
 		if(solution != 0x0) revert();  //prevent the same answer from awarding twice
 	}
