@@ -355,6 +355,13 @@ contract eraBitcoin is IERC20 {
 
 	}
 
+	//find current blockhash to prevent double submits in mining program until blockhash is fixed on zk sync era
+	function getCurrentBlockHash() public view returns (bytes32) {
+
+		return blockhash(block.number - 1);
+
+	}
+
 	
 	//the number of zeroes the digest of the PoW solution requires.  Auto adjusts
 	function getMiningDifficulty() public view returns (uint) {
