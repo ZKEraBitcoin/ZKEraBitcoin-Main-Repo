@@ -121,7 +121,7 @@ contract eraBitcoin is IERC20 {
     uint public  _MINIMUM_TARGET = 2**16; 
     uint public miningTarget = _MAXIMUM_TARGET;
     
-    bytes32 public challengeNumber = block.blockhash(block.number - 1);   //generate a new one when a new reward is minted
+    bytes32 public challengeNumber = blockhash(block.number - 1);   //generate a new one when a new reward is minted
 
     uint public rewardEra = 0;
     uint public maxSupplyForEra = (_totalSupply - _totalSupply.div( 2**(rewardEra + 1)));
@@ -174,7 +174,7 @@ contract eraBitcoin is IERC20 {
 		epochOld = 0;
 		miningTarget = _MAXIMUM_TARGET.div(2000);
 		latestDifficultyPeriodStarted2 = block.timestamp;
-		latestDifficultyPeriodStarted = ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber();
+		latestDifficultyPeriodStarted = block.number;
 		
 		return true;
 	}
@@ -234,7 +234,7 @@ contract eraBitcoin is IERC20 {
 			_reAdjustDifficulty();
 		}
 
-		challengeNumber = block.blockhash(block.number - 1);
+		challengeNumber = blockhash(block.number - 1);
 		bytes32 solution = solutionForChallenge[challengeNumber];
 		if(solution != 0x0) revert();  //prevent the same answer from awarding twice
 	}
