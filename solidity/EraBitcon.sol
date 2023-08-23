@@ -135,7 +135,7 @@ contract eraBitcoin is IERC20 {
     bool locked = false;
 	
 // metadata
-    string public name = "EraBitcoin";
+    string public name = "Era Bitcoin";
     string public constant symbol = "eraBTC";
     uint8 public constant decimals = 18;
 	
