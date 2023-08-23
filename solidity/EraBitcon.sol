@@ -231,6 +231,9 @@ contract eraBitcoin is IERC20 {
 		//every so often, readjust difficulty
 		if((epochCount) % (_BLOCKS_PER_READJUSTMENT) == 0)
 		{
+			if(_totalSupply < tokensMinted){
+				reward_amount = 0;
+			}
 			_reAdjustDifficulty();
 		}
 
