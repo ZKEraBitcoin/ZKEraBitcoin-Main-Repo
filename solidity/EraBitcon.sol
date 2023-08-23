@@ -213,8 +213,8 @@ contract eraBitcoin is IERC20 {
 	function _startNewMiningEpoch() internal {
 	
 		//if max supply for the era will be exceeded next reward round then enter the new era before that happens
-		//15 is the final reward era.
-		if( tokensMinted.add(reward_amount) > maxSupplyForEra && rewardEra < 15)
+		//30 is the final reward era.
+		if( tokensMinted.add(reward_amount) > maxSupplyForEra && rewardEra < 30)
 		{
 			rewardEra = rewardEra + 1;
 			maxSupplyForEra = _totalSupply - _totalSupply.div( 2**(rewardEra + 1));
