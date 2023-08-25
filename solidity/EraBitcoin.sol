@@ -142,7 +142,7 @@ contract eraBitcoin is IERC20 {
 	
     
 	constructor() {
-	    startTime = block.timestamp; 
+	    startTime = block.timestamp; //+ 60 * 60 * 24 * 5; 
 	    reward_amount = 0;  //Zero reward for first days to setup miners
 	    rewardEra = 0;
 	    tokensMinted = 0;
@@ -165,7 +165,7 @@ contract eraBitcoin is IERC20 {
 		//Starts mining after a few days period for miners to setup is done
 		require(!locked, "Only allowed to run once");
 		locked = true;
-		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must be after startTime On GMT: Monday, May 22, 2023 9:29:37 PM");
+		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must wait until after startTime. 5 days after contract launch");
 		reward_amount = 50 * 10**uint(decimals);
 		rewardEra = 0;
 		tokensMinted = 0;
