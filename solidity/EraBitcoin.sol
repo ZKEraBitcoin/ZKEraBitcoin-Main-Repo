@@ -217,12 +217,7 @@ contract eraBitcoin is IERC20 {
 		{
 			rewardEra = rewardEra + 1;
 			maxSupplyForEra = _totalSupply - _totalSupply.div( 2**(rewardEra + 1));
-			if(rewardEra < 4){
-				targetTime = ((12 * 60) * 2 ** rewardEra);
-				_BLOCKS_PER_READJUSTMENT = 1024 / (2**(rewardEra));
-			}else{
-				reward_amount = ( 50 * 10**uint(decimals)).div( 2**(rewardEra - 3  ) );
-			}
+			reward_amount = ( 50 * 10**uint(decimals)).div( 2**(rewardEra) );
 		}
 
 		epochCount = epochCount.add(1);
@@ -389,11 +384,8 @@ contract eraBitcoin is IERC20 {
 	//After rewardEra = 4 it halves the reward every Era because no more targetTime is added
 	function getMiningReward() public view returns (uint) {
 
-		if(rewardEra < 4){
-			return ( 50 * 10**uint(decimals));
-		}else{
-			return ( 50 * 10**uint(decimals)).div( 2**(rewardEra - 3  ) );
-		}
+		return ( 50 * 10**uint(decimals)).div( 2**(rewardEra) );
+
 	}
 
 
