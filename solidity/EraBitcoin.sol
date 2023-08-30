@@ -277,17 +277,6 @@ contract eraBitcoin is IERC20 {
 //// Helper Functions ////
 //////////////////////////
 
-	function blocksFromReadjust() public view returns (uint256 blocks){
-		blocks = (epochCount % _BLOCKS_PER_READJUSTMENT);
-		return blocks;
-	}
-	
-
-	function blocksToReadjust() public view returns (uint blocks){
-		blocks = _BLOCKS_PER_READJUSTMENT - ((epochCount) % _BLOCKS_PER_READJUSTMENT);
-		 return (blocks);
-	}
-
 
 	function reAdjustsToWhatDifficulty() public view returns (uint difficulty) {
 		if(epochCount - epochOld == 0){
