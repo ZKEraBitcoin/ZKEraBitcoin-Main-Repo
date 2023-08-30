@@ -531,7 +531,7 @@ contract eraBitcoin is IERC20 {
 * MIT License
 * ===========
 *
-* Copyright (c) 2023 EraBitcoin Tokens (eraBTC)
+* Copyright (c) 2023 Era Bitcoin Tokens (eraBTC)
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
