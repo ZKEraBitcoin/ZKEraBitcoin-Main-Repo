@@ -15,7 +15,7 @@
 // 100% of the token is given away fairly over 100+ years using Bitcoins model!
 //
 // **Contract allows 10 days for miners to setup miners with zero rewards**
-//  On GMT: Monday, May 22, 2023 9:29:37 PM the openMining() function is able to be called once to start mining with reward.
+//  On GMT: Thursday, September 14, 2023 6:00:00 PM the openMining() function is able to be called once to start mining with reward.
 //
 // Credits: 0xBitcoin
 
