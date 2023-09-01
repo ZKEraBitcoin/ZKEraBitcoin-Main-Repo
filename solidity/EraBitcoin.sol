@@ -136,7 +136,7 @@ contract EraBitcoin is IERC20 {
 	
 // metadata
     string public name = "Era Bitcoin";
-    string public constant symbol = "eraBTC";
+    string public constant symbol = "EraBTC";
     uint8 public constant decimals = 18;
 	
     
@@ -530,7 +530,7 @@ contract EraBitcoin is IERC20 {
 * MIT License
 * ===========
 *
-* Copyright (c) 2023 Era Bitcoin Tokens (eraBTC)
+* Copyright (c) 2023 Era Bitcoin Tokens (EraBTC)
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
