@@ -95,7 +95,7 @@ interface IERC20 {
 
 
 
-contract eraBitcoin is IERC20 {
+contract EraBitcoin is IERC20 {
 
 // Average BlockTime
     uint public targetTime = 60 * 12;
