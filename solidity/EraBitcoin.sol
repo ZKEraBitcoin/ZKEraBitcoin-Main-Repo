@@ -1,5 +1,5 @@
 // *****Change startTime to 4-7 days after contract launch to allow for miners to setup miners  *****
-// EraBitcoin (eraBTC) - EraBitcoin Token Contract
+// Era Bitcoin (eraBTC) - Era Bitcoin Token Contract
 //
 // Symbol: eraBTC
 // Decimals: 18 
