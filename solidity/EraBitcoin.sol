@@ -1,4 +1,3 @@
-// *****Change startTime to 4-7 days after contract launch to allow for miners to setup miners  *****
 // Era Bitcoin (eraBTC) - Era Bitcoin Token Contract
 //
 // Symbol: eraBTC
@@ -165,7 +164,7 @@ contract EraBitcoin is IERC20 {
 		//Starts mining after a few days period for miners to setup is done
 		require(!locked, "Only allowed to run once");
 		locked = true;
-		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must wait until after startTime. 7 days after contract launch");
+		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must wait until after startTime (Sept 14th 2023 @ 6PM GMT)");
 		reward_amount = 50 * 10**uint(decimals);
 		rewardEra = 0;
 		tokensMinted = 0;
