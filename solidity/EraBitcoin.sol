@@ -5,7 +5,7 @@
 //
 // Total supply: 21,000,000
 //
-// Mined over 50+ years using Bitcoins Distrubtion reward halvings every ~4 years. Uses Proof-oF-Work to distribute the tokens.
+// Mined over 100+ years using Bitcoins Distrubtion reward halvings every ~4 years. Uses Proof-oF-Work to distribute the tokens.
 //
 // Website: https://EraBitcoin.com/
 // Public Miner: https://EraBitcoin.com/download.html
