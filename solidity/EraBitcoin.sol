@@ -1,6 +1,6 @@
 // Era Bitcoin (eraBTC) - Era Bitcoin Token Contract
 //
-// Symbol: eraBTC
+// Symbol: EraBTC
 // Decimals: 18 
 //
 // Total supply: 21,000,000
