@@ -8,8 +8,8 @@
 //
 // Mined over 50+ years using Bitcoins Distrubtion reward halvings every ~4 years. Uses Proof-oF-Work to distribute the tokens.
 //
-// Website: https://eraBTC.com/
-// Public Miner: https://eraBTC.com/download.html
+// Website: https://EraBitcoin.com/
+// Public Miner: https://EraBitcoin.com/download.html
 // Discord: https://discord.gg/T5GVZsakUH
 //
 // No premine, dev cut, or advantage taken at launch. Public miner available at launch.  
@@ -132,7 +132,7 @@ contract EraBitcoin is IERC20 {
 
     mapping(bytes32 => bytes32) public solutionForChallenge;
 
-    uint public startTime = 1684790977;  //On GMT: Monday, May 22, 2023 9:29:37 PM
+    uint public startTime = 1694714400;  //On GMT: Thursday, September 14, 2023 6:00:00 PM
     bool locked = false;
 	
 // metadata
@@ -142,7 +142,7 @@ contract EraBitcoin is IERC20 {
 	
     
 	constructor() {
-	    startTime = block.timestamp; //+ 60 * 60 * 24 * 5; 
+	    //startTime = block.timestamp; //+ 60 * 60 * 24 * 5; 
 	    reward_amount = 0;  //Zero reward for first days to setup miners
 	    rewardEra = 0;
 	    tokensMinted = 0;
@@ -165,13 +165,13 @@ contract EraBitcoin is IERC20 {
 		//Starts mining after a few days period for miners to setup is done
 		require(!locked, "Only allowed to run once");
 		locked = true;
-		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must wait until after startTime. 5 days after contract launch");
+		require(block.timestamp >= startTime && block.timestamp <= startTime + 60* 60 * 24* 7, "Must wait until after startTime. 7 days after contract launch");
 		reward_amount = 50 * 10**uint(decimals);
 		rewardEra = 0;
 		tokensMinted = 0;
 		epochCount = 0;
 		epochOld = 0;
-		miningTarget = _MAXIMUM_TARGET.div(500);
+		miningTarget = _MAXIMUM_TARGET.div(1);
 		latestDifficultyPeriodStarted2 = block.timestamp;
 		latestDifficultyPeriodStarted = block.number;
 		
