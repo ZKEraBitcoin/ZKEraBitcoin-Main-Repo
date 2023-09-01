@@ -148,7 +148,7 @@ contract EraBitcoin is IERC20 {
 	    tokensMinted = 0;
 	    epochCount = 0;
 	    epochOld = 0;
-	    miningTarget = _MAXIMUM_TARGET.div(500);
+	    miningTarget = _MAXIMUM_TARGET.div(2000);
 	    latestDifficultyPeriodStarted2 = block.timestamp;
 	    latestDifficultyPeriodStarted = block.number;
 	    _startNewMiningEpoch();
@@ -171,7 +171,7 @@ contract EraBitcoin is IERC20 {
 		tokensMinted = 0;
 		epochCount = 0;
 		epochOld = 0;
-		miningTarget = _MAXIMUM_TARGET.div(1);
+		miningTarget = _MAXIMUM_TARGET.div(2000);
 		latestDifficultyPeriodStarted2 = block.timestamp;
 		latestDifficultyPeriodStarted = block.number;
 		
