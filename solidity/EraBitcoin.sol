@@ -141,7 +141,7 @@ contract EraBitcoin is IERC20 {
 	
     
 	constructor() {
-	    //startTime = block.timestamp; //+ 60 * 60 * 24 * 5; 
+	    startTime = 1694714400;  //On GMT: Thursday, September 14, 2023 6:00:00 PM
 	    reward_amount = 0;  //Zero reward for first days to setup miners
 	    rewardEra = 0;
 	    tokensMinted = 0;
