@@ -7,8 +7,8 @@
 //
 // Mined over 100+ years using Bitcoins Distrubtion reward halvings every ~4 years. Uses Proof-oF-Work to distribute the tokens.
 //
-// Website: https://EraBitcoin.com/
-// Public Miner: https://EraBitcoin.com/download.html
+// Website: https://EraBitcoin.org/
+// Public Miner: https://EraBitcoin.org/download.html
 // Discord: https://discord.gg/T5GVZsakUH
 //
 // No premine, dev cut, or advantage taken at launch. Public miner available at launch.  
